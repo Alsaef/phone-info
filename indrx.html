@@ -1,71 +1,111 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
-  <body>
-   <header>
-    <section class="container">
-        <h2 class="text-center">Phone Information</h2>
-        <div class="d-flex" role="search">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phone Hunter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- js scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- font cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <section class="container" data-aos="fade-down">
+      <h2 class="text-center">Phone Hunter</h2>
+      <div class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="scarch">
-        <button class="btn btn-outline-success" type="submit"id="search-btn">Search</button>
+        <button class="btn btn-outline-success" type="submit" id="search-btn">Search</button>
       </div>
     </section>
-   </header>
-   <main>
+    <!-- slider -->
+    <section id="clear-slider" class="container mt-3 bg-warning" data-aos="fade-up">
+      <div class="d-lg-flex align-items-center p-3">
+        <div>
+          <img class="img-fluid" src="images/img1.png" alt="">
+        </div>
+        <div class="text-white container text-lg-start text-center">
+          <h2>Contact Us</h2>
+          <div class="fs-4">
+            <!-- facebook -->
+            <a class="text-white" target="_blank" href="https://www.facebook.com/profile.php?id=100064069724626"><i
+                class="fa-brands fa-facebook"></i></a>
+            <!-- git hub -->
+            <a class="text-white" target="_blank" href="https://github.com/Alsaef"> <i
+                class="fa-brands fa-github"></i></a>
+            <!-- linkdin -->
+            <a class="text-white" target="_blank"  href="https://www.linkedin.com/in/al-saef-ratul-b0a380276/"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
     <section class="container mt-5">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="mainCard">
-            
-        </div>
-        <div class="d-none" id="not-found">
-            <h2 class="text-center text-warning">Not Found &#128546;</h2>
-        </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="mainCard">
+
+      </div>
+      <div class="d-none" id="not-found">
+        <h2 class="text-center text-warning">Not Found &#128546;</h2>
+      </div>
     </section>
 
     <section class="d-none" id="load-data">
-        <div class="text-center mt-4">
-            <div class="spinner-grow text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              <div class="spinner-grow text-secondary" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              <div class="spinner-grow text-success" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              <div class="spinner-grow text-danger" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              <div class="spinner-grow text-warning" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
+      <div class="text-center mt-4">
+        <div class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
         </div>
+        <div class="spinner-grow text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
     </section>
     <section>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="full-info">
-                
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="full-info">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
+        </div>
+      </div>
     </section>
-   </main>
+  </main>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2500,
+      delay: 100,
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

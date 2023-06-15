@@ -31,7 +31,7 @@ const LoadSingleData=(phoneData)=>{
               </div>
             </div>
     `;
-    mainCard.appendChild(cardDiv)
+    mainCard.appendChild(cardDiv);
   }
   prossingLoad(false)
 }
@@ -68,6 +68,8 @@ function Scarch() {
     const searchFild=document.getElementById("scarch");
     const searchValue=searchFild.value;
     dataLoad(searchValue)
+    const clear=document.getElementById("clear-slider")
+    clear.style.display="none"
 }
 document.getElementById("search-btn").addEventListener("click",function () {
     prossingLoad(true)
