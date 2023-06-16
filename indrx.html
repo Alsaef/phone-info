@@ -16,16 +16,16 @@
 </head>
 
 <body>
-  <header>
+  <header class="mt-2">
     <section class="container" data-aos="fade-down">
-      <h2 class="text-center">Phone Hunter</h2>
+      <h2 class="text-center">Phone <span class="text-danger">Hunter</span></h2>
       <div class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="scarch">
         <button class="btn btn-outline-success" type="submit" id="search-btn">Search</button>
       </div>
     </section>
     <!-- slider -->
-    <section id="clear-slider" class="container mt-3 bg-warning" data-aos="fade-up">
+    <section id="clear-slider" class="container mt-3 bg-warning rounded" data-aos="fade-up">
       <div class="d-lg-flex align-items-center p-3">
         <div>
           <img class="img-fluid" src="images/img1.png" alt="">
@@ -41,6 +41,8 @@
                 class="fa-brands fa-github"></i></a>
             <!-- linkdin -->
             <a class="text-white" target="_blank"  href="https://www.linkedin.com/in/al-saef-ratul-b0a380276/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <button class="btn btn-primary px-2" data-bs-toggle="modal" data-bs-target="#feedback">Feedback <i class="fa-solid fa-comment"></i></button>
+
           </div>
         </div>
       </div>
@@ -93,9 +95,43 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="modal fade" id="feedback" tabindex="-1" aria-labelledby="feedback-lav" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="feedback-lav">Feedback</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form name="submit-to-google-sheet">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" name="Name" placeholder="Your Name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="Email" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">FeedBack</label>
+                <textarea class="form-control" id="text" name="Text" rows="3"></textarea>
+              </div>
+              <div>
+                <button class="btn btn-success" type="submit">Submit</button>
+                <button class="btn btn-danger" type="reset">Reset</button>
+              </div>
+              <p id="success"></p>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
+  <script src="feedback.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({

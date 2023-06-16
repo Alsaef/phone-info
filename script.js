@@ -26,7 +26,7 @@ const LoadSingleData=(phoneData)=>{
                 <div class="card-body">
                   <h5 class="card-title">${data.phone_name}</h5>
                   <h4 class="card-text">${data.brand}</h5>
-                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="phoneDataLoad('${data.slug}')">Phone Information</button>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="phoneDataLoad('${data.slug}')">Phone Information <i class="fa-solid fa-circle-info"></i></button>
                 </div>
               </div>
             </div>
